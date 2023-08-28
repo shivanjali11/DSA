@@ -7,26 +7,25 @@ using namespace std;
 class Solution {
   public:
     void printTriangle(int n) {
-            for (int i = 0; i < n; i++) {
-        // Print spaces on the left
-        for (int j = 0; j < n - i - 1; j++) {
-            cout << " ";
+        for(int i=0;i<n;i++)
+        {
+            // spaces
+            for(int j=0;j<n-i-1;j++)
+            {
+                cout<<" ";
+            }
+            char ch='A';
+            for(int j=0;j<=i;j++)
+            {
+                cout<<ch++;
+            }
+            ch--;
+            for(int j=0;j<i;j++)
+            {
+                cout<<--ch;
+            }
+            cout<<endl;
         }
-        
-        // Print characters in increasing order
-        char ch = 'A';
-        for (int j = 0; j <= i; j++) {
-            cout << ch++;
-        }
-        
-        // Print characters in decreasing order
-        ch--;
-        for (int j = 0; j < i; j++) {
-            cout << --ch;
-        }
-        
-        cout << endl;
-    }
         // code here
     }
 };
