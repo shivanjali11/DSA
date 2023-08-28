@@ -14,19 +14,12 @@ public:
 	        {
 	            cout<<" ";
 	        }
-	        for(int j=1;j<=2*n-(2*i+1);j++)
+	        for(int k=0;k<2*n-(2*i+1);k++)
 	        {
 	            cout<<"*";
 	        }
-	        for(int j=0;j<i;j++)
-	        {
-	            cout<<" ";
-	        }
 	        cout<<endl;
-	        
 	    }
-	    
-	    
 	    // code here
 	}
 };
