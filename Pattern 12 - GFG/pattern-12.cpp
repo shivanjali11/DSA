@@ -13,18 +13,20 @@ class Solution {
             {
                 cout<<j<<" ";
             }
-            for(int j=0;j<2*(n-i);j++)
+            // spaces
+            for(int j=0;j<2*n-2*i;j++)
             {
-                cout<<" ";
+                cout<<"  ";
             }
             for(int j=i;j>=1;j--)
             {
-                cout<<j<<" ";
-            } 
+                cout<<j;
+                if(j>1)
+                {
+                    cout<<" ";
+                }
+            }
             cout<<endl;
-            
-            
-            
         }
         // code here
     }
