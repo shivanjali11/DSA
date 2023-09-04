@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-       long int rev=0;
-        long int n=x;
+        long long n=x;
+        long long rev=0;
         if(x<0)
         {
             return false;
@@ -13,15 +13,9 @@ public:
             rev=rev*10+rem;
             x=x/10;
         }
-        if(n==rev)
-        {
-           return true;
-        }
+        if(rev==n)
+            return true;
         else
-        {
             return false;
-        }
-        
-        
     }
 };
