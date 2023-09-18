@@ -11,7 +11,7 @@ public:
         {
             if(nums[i]!=nums[j])
             {
-                nums[i+1]=nums[j];
+                swap(nums[i+1],nums[j]);
                 i++;
                 k=i+1;        
             }
