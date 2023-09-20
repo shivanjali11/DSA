@@ -14,9 +14,9 @@ public:
                     break;
                 }
             }
-            if (j == n && i == n) {
-                return n;
-            }
+            // if (j == n && i == n) {
+            //     return n;
+            // }
             if (count == 0) {
                 return i;
             }
