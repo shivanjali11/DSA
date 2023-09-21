@@ -1,17 +1,12 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-            map<int,int>m;
-            int n=nums.size();
-            for(int i=0;i<n;i++)
+//           xor
+          int x1=0;
+            for(int i=0;i<nums.size();i++)
             {
-                    m[nums[i]]++;
+                    x1=x1^nums[i];
             }
-            for(const auto &it:m)
-            {
-                    if(it.second==1)
-                            return it.first;
-            }
-        return -1;
+            return x1;
     }
 };
