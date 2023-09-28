@@ -1,20 +1,34 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& v) {
-          int n=v.size();
-	map<int,int>m;
-	for(int i=0;i<n;i++)
-	{
-		m[v[i]]++;
-	}
-	for(const auto it:m)
-	{
-		if(it.second>(n/2))
-		{
-			return it.first;
-		}
-	}
-	return -1;  
+    int majorityElement(vector<int>& nums) {
+//             MOORE'S VOTING ALGORITHM
+            int count=0;
+            int n=nums.size();
+            int ind=0;
+            for(int i=0;i<n;i++)
+            {
+                   int ele=nums[ind];
+                    if(nums[i]==ele)
+                    {
+                            count++;
+                    }
+                    else
+                    {
+                            count--;
+                            if(count==0)
+                            {
+                                    ind=i+1;
+                            }
+                    }
+                    
+                    
+            }
+            if(count!=0)
+            {
+                    return nums[ind];
+            }
+            else
+                    return -1;
         
     }
 };
