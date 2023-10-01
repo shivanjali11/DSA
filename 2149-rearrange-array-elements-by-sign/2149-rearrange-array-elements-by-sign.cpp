@@ -14,25 +14,12 @@ public:
         p.push_back(a[i]);
         
     }
-    vector<int>ne;
-     int k=0;
-        int l=0;
-    for(int i=0;i<n;i++)
-    {
-       
-        if(i%2==0)
-        {
-            ne
-            .push_back(p[k]);
-            k++;
-        }
-        else
-        {
-           ne.push_back(neg[l]);
-           l++;
-        } 
-        
-    }
+    vector<int>ne(n,0);
+     for(int i=0;i<n/2;i++){
+      
+      ne[2*i] = p[i];
+      ne[2*i+1] = neg[i];
+  }
     return ne;
         
     }
