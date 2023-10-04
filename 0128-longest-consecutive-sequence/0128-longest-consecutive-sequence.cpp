@@ -7,8 +7,8 @@ public:
                     return 0;
             }
          unordered_set<int>s;
-            // int x;
-            // int count=0;
+            int x;
+            int count=0;
             int largest=1;
             for(int i=0;i<n;i++)
             {
@@ -18,8 +18,8 @@ public:
             {
                     if(s.find(it-1)==s.end())
                     {
-                          int x =it; 
-                           int count=1;
+                          x =it; 
+                            count=1;
                             while(s.find(x+1)!=s.end())
                             {      
                                     x=x+1;
