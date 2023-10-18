@@ -2,30 +2,27 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
             int n=nums.size();
-            int num=n/3;
             vector<int>ans;
-            int count=0;
             for(int i=0;i<n;i++)
             {
-                    count=0;
-                    if(find(ans.begin(),ans.end(),nums[i])==ans.end())
+                    int count=0;
+                    if(ans.size()==0||ans[0]!=nums[i])
                     {
-                          for(int j=0;j<n;j++)
-                         {
-                                    
-                           if(nums[i]==nums[j])
-                           {
-                                   count++;
+                            for(int j=0;j<n;j++)
+                            {
+                                    if(nums[i]==nums[j])
+                                    {
+                                            count++;
+                                    }
                             }
-                                      
-                          }     
-                    }
-                            
-                 
-                    if(count>num)
+                            if(count>(n/3))
                     {
                             ans.push_back(nums[i]);
                     }
+                    }
+                    
+                    if(ans.size()==2)
+                            break;
             }
             return ans;
         
