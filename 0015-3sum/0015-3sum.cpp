@@ -14,7 +14,9 @@ public:
                     
                while(j<k)
               {
-                        int sum=nums[i]+nums[j]+nums[k];
+                        long long sum=nums[i];
+                                sum+=nums[j];
+                       sum+=nums[k];
                   if(sum<0)
                     {
                        j++;     
