@@ -14,10 +14,7 @@ public:
                     }
                     else
                     {
-                           if(ans.back()[1]<arr[i][1])
-                           {
-                                   ans.back()[1]=arr[i][1];
-                           }
+                          ans.back()[1]=max(ans.back()[1],arr[i][1]);
                     }
             }
             return ans;
